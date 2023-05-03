@@ -7,7 +7,6 @@ dotenv.config();
 const openAIApiKey = process.env.OPENAI_API_KEY;
 
 async function main(): Promise<void> {
-  console.log('===== calling');
   const model = new OpenAI({ openAIApiKey, modelName: 'gpt-3.5-turbo' });
   const chain = await conversationalChain(
     model,
